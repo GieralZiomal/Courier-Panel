@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Homepage</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static "assets/main.css" %}'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <main class="main-index">
+        <div class="wrapper">
+            <div class="intro">
+                <img src="{% static 'media/logo.png' %}" >
+            </div>
+    
+            <h1 class="welcome" id="welcome">Witamy w OneFleet</h1>
+    
+            <div class="picklang">
+                <select class="index-lang" id="locales" name="lang">
+                    <option value="en">ENG</option>
+                    <option value="pl">PL</option>
+                </select>
+            </div>
+    
+            <button class="btn btn-blue" onclick="location.href='/login_view';" id="login-btn">Zaloguj się</button>
+            <button class="btn btn-dark index-btn" onclick="location.href='/register_view';" id="register-btn">Rejestracja</button>
+        </div>
+    </main>
+
+    <script>
+        var welcome = document.getElementById('welcome');
+        var logbtn = document.getElementById('login-btn');
+        var registerbtn = document.getElementById('register-btn')
+        var mySelect = document.getElementById('locales');
+        mySelect.addEventListener('change', (event) => {
+    
+        if(document.getElementById('locales').value == "en") {
+            welcome.innerHTML = "Welcome to OneFleet";
+            logbtn.innerHTML = "Login";
+            registerbtn.innerHTML = "Register";
+        }
+        else if(document.getElementById('locales').value == "pl") {
+            welcome.innerHTML = "Witamy OneFleet";
+            logbtn.innerHTML = "Zaloguj się";
+            registerbtn.innerHTML = "Zarejestruj się ";
+        }
+
+    });
+	</script>
+
+</body>
+</html>

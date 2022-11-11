@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="wrapperm">
+    <h1>Documents</h1>
+{% for documents in documentlist %}
+
+    <h3>{{documents.typ_dokumentu}}</h3><a href="{{documents.dokument.url}}" download>Pobierz</a><br>
+
+
+{% endfor %}
+    <h1>Uploading Files</h1>
+
+    <form action="{% url 'sdocuments' %}" method="post" enctype="multipart/form-data">
+    <div style="display: flex; flex-direction: column; justify-content: center;" class="text-center">
+    <select name="documenttype" class="text-black text-center"><br>
+        <option value="Pasport">Pasport</option>
+        <option value="Legitimation">Legitimation</option>
+        <option value="Visa/Residence Card">Visa/Residence Card</option>
+        <option value="Certificate of study">Certificate of study</option>
+    </select><br>
+    <input type="file" name="plik"><br>
+    <input type="submit"><br>
+    </div>
+    </form>
+
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<div class="wrapperm">
+    <h1>Earnings</h1>
+    {% for rozliczenia in rozliczenialist %}
+
+        <div class="wrapperm__table">
+
+            <p>Okres: {{rozliczenia.datedate}}</p>
+            <p>Przychód: {{rozliczenia.money}} PLN</p>
+            <p>VAT: {{rozliczenia.Vat}}</p>
+            <p>Aplikacja: {{rozliczenia.appname}}</p>
+            <p>Prowizja Partnera: {{rozliczenia.Prowizja_Partnera}}</p>
+            <p>Koszty ZUS i Podatki: {{rozliczenia.Koszty_ZUS_I_Podatki}}</p>
+            <p>Inne Koszty: {{rozliczenia.Inne_Koszty}}</p>
+            <p>Wypłata z tytułu najmu: {{rozliczenia.Wypłata_Z_Tytułu_Najmu}}</p>
+            <p>Wypłata z tytułu zlecenia: {{rozliczenia.Wypłata_Z_Tytułu_Zlecenia}}</p>
+            <p>Wypłata Suma:  {{rozliczenia.Wypłata_Suma}}</p>
+            {% if rozliczenia.przelewwykonany %}<p>Przelew Wykonany!</p>{% endif %}
+    </div>
+
+    {% endfor %}
+</div>
+
+<script>
+
+    
+
+</script>
+
+{% endblock %}

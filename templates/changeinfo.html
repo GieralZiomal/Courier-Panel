@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="wrapper" style="height: calc(150vh - 200px);">
+    <div class="banknumber">
+        <form action="{% url 'changeinfo' %}">
+            {% csrf_token %}
+        <h2>Zmień numer rachunku/Change bank number</h2>
+        <label>Numer Rachunku:</label>
+        <input  name="banknumber" type="text" style="color: black;">
+        <input type="submit">
+        </form>
+    </div>
+</div>
+{% endblock %}

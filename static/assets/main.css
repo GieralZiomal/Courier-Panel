@@ -1,0 +1,185 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--white);
+    margin: 0;
+    font-weight: 400;
+    font-family: "Raleway", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #042d3d;
+    color:white;
+}
+
+#bglogin {
+
+    background-color: #042d3d;
+
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 360px;
+    margin: 40px auto 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    height: 46px;
+    font-weight: 800;
+    font-family: "Raleway", sans-serif;
+    font-size: 17px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    flex-shrink: 0;
+    background-color: #02a0e1;
+}
+
+#locales {
+
+    background-color: #02a0e1;
+    height: auto;
+
+}
+
+#payff {
+
+    background-color: #02a0e1;
+    width: 40%;
+    height: auto;
+    color:white;
+    
+
+}
+
+.wrapperm {
+    width: 100%;
+    max-width: 360px;
+    margin: 40px auto 20px;
+    flex: 1 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    
+
+}
+
+.wrapperm__title {
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.wrapperm__content {
+
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+#navbar {
+
+    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #061b24;
+  gap: 10px;
+ 
+
+}
+
+.topbar {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+a {
+
+    text-decoration: none;
+    color:white;
+    font-size: 25px;
+
+}
+
+.wrapperm__table {
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+
+}
+
+#navbar__item {
+
+    border:solid 1px white;
+    background-color: #02a0e1;
+
+}
+
+[type=text] {
+
+    width: 80%;
+    height: auto;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+
+[type=email] {
+
+    width: 80%;
+    height: auto;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+
+[type=password] {
+
+    width: 80%;
+    height: auto;
+    font-size: 20px;
+    border-radius: 5px;
+
+}
+
+
+
+[type=submit] {
+
+    width: 80%;
+    height: auto;
+    font-size: 20px;
+    background-color: #02a0e1;
+    color: white;
+    margin-top: 10px;
+
+}
+
+main {
+
+    display: flex;
+    flex-direction: row;
+
+}

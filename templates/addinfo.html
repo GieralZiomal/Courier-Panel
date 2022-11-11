@@ -1,0 +1,86 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="wrapper">
+    <h1>End Registration</h1>
+<form method="POST" action="/addinfo/">
+    {% csrf_token %}
+    <div class="banknumber" style="color:white;">
+        <h1>Dane Personalne</h1>
+        <form>
+        <label>Pesel:</label><br>
+        <input type="text"name="pesel"><br>
+        <label>Imie:</label><br>
+        <input type="text" name="fname"><br>
+        <label>Nazwisko:</label><br>
+        <input type="text" name="lname"><br>
+        <label>Numer dokumentu:</label><br>
+        <input type="text" name="idnumer"><br>
+        <label>Data urodzenia:</label><br>
+        <input type="text" name="birth"><br>
+        <label>Ulica:</label><br>
+        <input type="text" name="ulica"><br>
+        <label>Numer domu:</label><br>
+        <input type="text" name="numerdomu"><br>
+        <label>Kod pocztowy:</label><br>
+        <input type="text" name="kodpocztowy"><br>
+        <label>Aplikacja/Aplikacje:</label><br>
+        <input type="text" name="app"><br>
+        <label>MIasto:</label><br>
+        <input type="text" name="miasto"><br>
+        <label>Środek Transportu</label><br>
+        <select id="payff" name="srodek_transportu">
+            <option value="samochód">Samochód/Car</option>
+            <option value="hulajnoga">Hulajnoga/Scooter</option>
+            <option value="rower">Rower/Bike</option>
+            <option value="moped">Moped</option>
+        </select>
+        <h1>Dane Dotyczące Umowy</h1>
+        <label>Jestem z Ukrainy - mam status UKR, lub przyjechałem/am po 24.02.2022</label><br>
+        <select id="payff" name="ukraina">
+
+            <option value="tak">Tak</option>
+            <option value="nie">Nie</option>
+
+        </select><br>
+        <label>Mam kartę Polaka</label><br>
+        <select id="payff" name="polak">
+
+            <option value="tak">Tak</option>
+            <option value="nie">Nie</option>
+
+        </select><br>
+        <label>Mam kartę rezydenta EU</label><br>
+        <select id="payff" name="reu">
+
+            <option value="tak">Tak</option>
+            <option value="nie">Nie</option>
+
+        </select><br>
+        <label>Mam kartę pobytu na podstawie połączenia z rodziną</label><br>
+        <select id="payff" name="kartapobyturodzina">
+
+            <option value="tak">Tak</option>
+            <option value="nie">Nie</option>
+
+        </select>
+        <br><label>Jestem z Białorusi i posiadam wizę 21 lub 23 Biznes Hub</label><br>
+        <select id="payff" name="bialorus">
+
+            <option value="tak">Tak</option>
+            <option value="nie">Nie</option>
+
+        </select><br>
+        <label>Jestem obywatelem EU</label><br>
+        <select id="payff" name="obywateleu">
+
+        <option value="tak">Tak</option>
+        <option value="nie">Nie</option>
+
+        </select><br>
+        <input type="submit" value="uzupełnij dane"><br>
+        </form>
+    </div>
+</form>
+</div>
+{% endblock %}
